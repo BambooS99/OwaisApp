@@ -1,27 +1,39 @@
 import React, { useState } from "react";
 
 function LoginForm() {
+  let random = (Math.random() + 1).toString(36).substring(6);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("A name was submitted:  + ${name}");
-    alert("A password was submitted:  + ${password}");
+
+    sessionStorage.setItem("random", random);
+    alert("You are logged in");
   };
+  sessionStorage.clear();
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
-        <label htmlFor="password">Password:</label>
 
         <input
           type="text"
-          id="password"
-          value={password}
+          value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-      <button type="submit">Submit</button>
+      <div className="passwordForm">
+        <label htmlFor="password">Password:</label>
+
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <button className="loginButton" type="submit">
+        Login
+      </button>
     </form>
   );
 }
