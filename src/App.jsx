@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import loginIcon from "./LoginIcon.png";
 import "./App.css";
 import React from "react";
 import LoginForm from "./Login";
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={loginIcon} className="App-logo" alt="logo" />
         <p>
           <LoginForm />{" "}
         </p>
