@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   let random = (Math.random() + 1).toString(36).substring(6);
@@ -32,7 +33,7 @@ function LoginForm() {
         />
       </div>
       <button className="loginButton" type="submit">
-        Login
+        <Link to="Homepage">Login</Link>
       </button>
     </form>
   );
