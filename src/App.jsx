@@ -11,14 +11,7 @@ function App() {
         <p>
           <LoginForm />{" "}
         </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Login
-        </a> */}
+        {}
       </header>
     </div>
   );
