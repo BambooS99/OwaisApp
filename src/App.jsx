@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={loginIcon} className="App-logo" alt="logo" />
         <p>
-          <LoginForm />{" "}
+          <LoginForm />
         </p>
         {}
       
@@ -17,5 +17,6 @@ function App() {
     </div>
   );
 }
+//TODO Learn React Router and React state hook for adding cards
 
 export default App;
